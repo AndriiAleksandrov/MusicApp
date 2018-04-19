@@ -2,7 +2,10 @@ package com.example.stud.musicapp.topsongs;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
 import android.widget.Toast;
 
 import com.example.stud.musicapp.API.Apiservice;
@@ -22,6 +25,9 @@ public class TopSongsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_top_songs);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
+        RecyclerView rvList ;
+
 
         Call<TrendingList> trendingListCall = Apiservice.getService().getTrendingList("us","itunes","singles");
         trendingListCall.enqueue(new Callback<TrendingList>() {
