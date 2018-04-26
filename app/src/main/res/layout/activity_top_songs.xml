@@ -12,3 +12,4 @@ tools:context="com.example.stud.musicapp.topsongs.TopSongsActivity">
         android:layout_height= "match_parent" />
 
 </LinearLayout>
+
