@@ -40,6 +40,8 @@ public class SongDetailsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_song_details);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
+
+
         Intent intent = getIntent();
          track = intent.getStringExtra(TRACK);
          artist = intent.getStringExtra(ARTIST);
