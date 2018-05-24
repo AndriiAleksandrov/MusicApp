@@ -6,4 +6,6 @@
     <string name="style">Style</string>
     <string name="favorites">Ulubione</string>
     <string name="znajdz_album">Znajdz_album</string>
+    <string name="search">Szukaj</string>
+    <string name="enter_artist_name">Podaj nazwe wykonawcy</string>
 </resources>

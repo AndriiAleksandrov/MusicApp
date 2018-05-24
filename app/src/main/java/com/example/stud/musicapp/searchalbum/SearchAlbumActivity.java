@@ -12,6 +12,7 @@ public class SearchAlbumActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_search_album);
     }
+
     @Override
     public boolean onSupportNavigateUp() {
         onBackPressed();

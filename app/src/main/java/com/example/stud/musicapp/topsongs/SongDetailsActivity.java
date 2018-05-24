@@ -30,9 +30,9 @@ public class SongDetailsActivity extends AppCompatActivity {
     public static final String ARTIST = "artist";
     public static final String TRACK_ID = "track_id";
 
-     String track ;
-     String artist ;
-     int trackid ;
+    private String track ;
+    private String artist ;
+    private int trackid ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
