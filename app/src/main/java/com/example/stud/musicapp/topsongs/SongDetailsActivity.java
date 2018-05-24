@@ -67,18 +67,18 @@ public class SongDetailsActivity extends AppCompatActivity {
         });
     }
     private void showData(Track track) {
-        TextView tvAlbum = findViewById(R.id. tvAlbum );
-        TextView tvGenre = findViewById(R.id. tvGenre );
-        TextView tvStyle = findViewById(R.id. tvStyle );
-        TextView tvDescription = findViewById(R.id. tvDescription );
-        tvAlbum.setText(track. strAlbum );
-        tvGenre.setText(track. strGenre );
-        tvStyle.setText(track. strStyle );
-        tvDescription.setText(track. strDescriptionEN );
+        TextView tvAlbum = findViewById(R.id.tvAlbum );
+        TextView tvGenre = findViewById(R.id.tvGenre );
+        TextView tvStyle = findViewById(R.id.tvStyle );
+        TextView tvDescription = findViewById(R.id.tvDescription );
+        tvAlbum.setText(track.strAlbum );
+        tvGenre.setText(track.strGenre );
+        tvStyle.setText(track.strStyle );
+        tvDescription.setText(track.strDescriptionEN );
 
-        if (track. strTrackThumb != null && !track. strTrackThumb .isEmpty()) {
-            ImageView ivThumb = findViewById(R.id. ivThumb );
-            Glide. with ( this ).load(track. strTrackThumb ).into(ivThumb);
+        if (track. strTrackThumb != null && !track.strTrackThumb .isEmpty()) {
+            ImageView ivThumb = findViewById(R.id.ivThumb );
+            Glide. with ( this ).load(track.strTrackThumb ).into(ivThumb);
         }
     }
     @Override

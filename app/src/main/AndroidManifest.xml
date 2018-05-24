@@ -26,6 +26,10 @@
         <activity
             android:name=".favorites.FavoritesActivity"
             android:label="@string/favorites" />
+        <activity android:name=".searchalbum.SearchAlbumActivity"
+            android:label="@string/znajdz_album">
+
+        </activity>
     </application>
 
 </manifest>
