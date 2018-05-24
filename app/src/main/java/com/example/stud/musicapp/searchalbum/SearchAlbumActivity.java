@@ -4,6 +4,7 @@ import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -29,8 +30,11 @@ public class SearchAlbumActivity extends AppCompatActivity {
         etQuery = findViewById(R.id.edQuery);
         rvList=findViewById(R.id.rvList);
 
-        String artist = sharedPreferences.getString("query",null);
-        etQuery.setText(artist);
+        try {
+            etQuery .setText( sharedPreferences .getString( "query" , null ));
+        } catch (ClassCastException e) {
+            Log.e ( "TAG" , "błąd odczytu danych" , e);
+        }
 
         Button bSearch = findViewById(R.id.bSearch);
         bSearch.setOnClickListener(new View.OnClickListener() {

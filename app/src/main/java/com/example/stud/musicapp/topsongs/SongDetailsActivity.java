@@ -32,7 +32,7 @@ public class SongDetailsActivity extends AppCompatActivity {
 
     private String track ;
     private String artist ;
-    private int trackid ;
+    private int trackId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -45,13 +45,13 @@ public class SongDetailsActivity extends AppCompatActivity {
         Intent intent = getIntent();
          track = intent.getStringExtra(TRACK);
          artist = intent.getStringExtra(ARTIST);
-         trackid = intent.getIntExtra(TRACK_ID, 0);
+         trackId = intent.getIntExtra(TRACK_ID, 0);
 
         getSupportActionBar().setTitle(track);
         getSupportActionBar().setSubtitle(artist);
 
 
-        Apiservice.getService().getTrack(trackid).enqueue(new Callback<Tracks>() {
+        Apiservice.getService().getTrack(trackId).enqueue(new Callback<Tracks>() {
             @Override
             public void onResponse(Call<Tracks> call, Response<Tracks> response) {
                 Tracks tracks = response.body();
@@ -111,7 +111,7 @@ public class SongDetailsActivity extends AppCompatActivity {
         Realm realm = Realm.getDefaultInstance();
         Favorite favorite = realm
                 .where(Favorite. class )
-                .equalTo( "trackId" , trackid )
+                .equalTo( "trackId" , trackId)
                 .findFirst();
         if (favorite == null ) {
             addToFavorites(realm);
@@ -127,7 +127,7 @@ public class SongDetailsActivity extends AppCompatActivity {
                 Favorite favorite = realm.createObject(Favorite. class );
                 favorite.setArtist( artist );
                 favorite.setTrack( track );
-                favorite.setTrackid( trackid );
+                favorite.setTrackId(trackId);
                 favorite.setDate( new Date());
                 Toast. makeText (SongDetailsActivity. this , "Dodano do ulubionych" ,
                         Toast. LENGTH_SHORT ).show();

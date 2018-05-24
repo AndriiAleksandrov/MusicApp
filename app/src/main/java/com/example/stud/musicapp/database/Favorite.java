@@ -11,7 +11,7 @@ import io.realm.RealmObject;
 public class Favorite extends RealmObject {
     private String track ;
     private String artist ;
-    private int trackid ;
+    private int trackId;
     private Date date ;
 
     public String getTrack() {
@@ -30,12 +30,12 @@ public class Favorite extends RealmObject {
         this.artist = artist;
     }
 
-    public int getTrackid() {
-        return trackid;
+    public int getTrackId() {
+        return trackId;
     }
 
-    public void setTrackid(int trackid) {
-        this.trackid = trackid;
+    public void setTrackId(int trackId) {
+        this.trackId = trackId;
     }
 
     public Date getDate() {
